@@ -19,7 +19,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'Name the team manager'
+            message: 'Name the team manager',
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -32,7 +32,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'id',
-            message: 'Enter manager ID'
+            message: 'Enter manager ID',
             validate: nameInput => {
                 if (isNaN(nameInput)) {
                     console.log ("Invalid ID");
@@ -59,7 +59,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'officeNumber',
-            message: 'Enter manager ID'
+            message: 'Enter manager ID',
             validate: nameInput => {
                 if (isNaN(nameInput)) {
                     console.log ("Invalid Office Number");
