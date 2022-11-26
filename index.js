@@ -59,7 +59,7 @@ const addManager = () => {
         {
             type: 'input',
             name: 'officeNumber',
-            message: 'Enter manager ID',
+            message: 'Enter Office Number',
             validate: nameInput => {
                 if (isNaN(nameInput)) {
                     console.log ("Invalid Office Number");
@@ -116,7 +116,7 @@ const addEmployee = () => {
         {
             type: 'input',
             name: 'email',
-            message: `Enter manager's email`,
+            message: `Enter employee's email`,
             validate: email => {
                 valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
                 if (valid) {
