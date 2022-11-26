@@ -10,8 +10,8 @@ const Intern = require('./lib/Intern');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
-// team
-const teamArray = [];
+// the whole team
+const employeesArray = [];
 
 // manager prompts
 const addManager = () => {
@@ -74,7 +74,7 @@ const addManager = () => {
         const { name, id, email, officeNumber } = managerInput;
         const manager = new Manager (name, id, email, officeNumber);
 
-        teamArray.push(manager);
+        employeesArray.push(manager);
         console.log(manager);
     })
 };
@@ -177,12 +177,12 @@ const addEmployee = () => {
             console.log(employee);
         }
 
-        teamArray.push(employee); 
+        employeesArray.push(employee); 
 
         if (confirmAddEmployee) {
-            return addEmployee(teamArray); 
+            return addEmployee(employeesArray); 
         } else {
-            return teamArray;
+            return employeesArray;
         }
     })
 };
@@ -200,8 +200,8 @@ const createFile = data => {
 
 addManager()
     .then(addEmployee)
-    .then(teamArray => {
-        return generateHTML(teamArray);
+    .then(employeesArray => {
+        return generateHTML(employeesArray);
     })
     .then(pageHTML => {
         return createFile(pageHTML);
