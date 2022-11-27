@@ -84,7 +84,7 @@ const addEmployee = () => {
         {
             type: 'list',
             name: 'role',
-            message: 'Choose a role for this Employee',
+            message: 'Choose a role for the next Employee',
             choices: ['Engineer', 'Intern']
         },
         {
@@ -155,7 +155,7 @@ const addEmployee = () => {
         },
         {
             type: 'confirm',
-            name: 'confirmAddingEmployee',
+            name: 'confirmAddEmployee',
             message: 'Would you like to add more team members?',
             default: false
         }
@@ -188,7 +188,7 @@ const addEmployee = () => {
 };
 
 const createFile = data => {
-    fs.createFile('./dist/index.html', data, err => {
+    fs.writeFile('./dist/index.html', data, err => {
         if (err) {
             console.log(err)
             return;

@@ -3,12 +3,12 @@ const createManagerEl = function (manager) {
     return `
     <div class="card" style="width: 18rem;">
         <div class="card-header bg-info">
-            ${manager.name}
+            ${manager.name} <span class="material-icons md-24">work</span>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item id">ID: ${manager.id}</li>
-            < class="list-group-item email">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
-            <li class="list-group-item office">github: ${manager.github}</li>
+            <li class="list-group-item email">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
+            <li class="list-group-item office">Office Number: ${manager.officeNumber}</li>
         </ul>
     </div>
     `
@@ -18,12 +18,12 @@ const createEngineerEl = function (engineer) {
     return `
     <div class="card" style="width: 18rem;">
         <div class="card-header bg-info">
-            ${engineer.role}
+            ${engineer.name} <span class="material-icons md-24">engineering</span>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${engineer.id}</li>
-            <li class="list-group-item">Email: <a href="mailto:${manager.email}">${engineer.email}</a></li>
-            <li class="list-group-item">Office Number: ${engineer.officeNumber}</li>
+            <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+            <li class="list-group-item">github: ${engineer.github}</li>
         </ul>
     </div>
     `
@@ -33,12 +33,12 @@ const createInternEl = function (intern) {
     return `
     <div class="card" style="width: 18rem;">
         <div class="card-header bg-info">
-            ${intern.name}
+            ${intern.name} <span class="material-icons md-24">school</span>
         </div>
         <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${intern.id}</li>
             <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
-            <li class="list-group-item">github: ${intern.github}</li>
+            <li class="list-group-item">School: ${intern.school}</li>
         </ul>
     </div>
     `
@@ -89,7 +89,7 @@ const generatePage = function (employeeEls) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <header class="d-flex flex-wrap align-content-center justify-content-center border-bottom bg-success">
